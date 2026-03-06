@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    position: relative;
+    width: 288px;
+    height: 512px;
+    background: url(gallery/sprites/background.png);
+    overflow: hidden;
+}
+
+.message {
+    position: absolute;
+    top: 12%;
+    left: 19%;
+    background: url(gallery/sprites/message.png);
+    width: 184px;
+    height: 267px;
+}
+
+.game-score {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    font-size: large;
+    left: 10px;
+    top: 10px;
+}
+
+.lower-pipe {
+    position: absolute;
+    width: 52px;
+    background: #583E3E;
+    right: -52px;
+    bottom: 110px;
+    background: url(gallery/sprites/pipe.png) no-repeat;
+    animation: pipe 3s linear infinite;
+}
+
+.upper-pipe {
+    position: absolute;
+    width: 52px;
+    background: #583E3E;
+    right: -52px;
+    background: url(gallery/sprites/pipe.png) no-repeat;
+    transform: rotate(180deg);
+    animation: pipe 3s linear infinite;
+}
+
+@keyframes pipe {
+    to {
+        right: 288px;
+    }
+}
+
+#base {
+    width: 288px;
+    height: 110px;
+    bottom: 0;
+    position: absolute;
+    background: url(gallery/sprites/base.png) no-repeat;
+}
+
+#player {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    left: 25px;
+    top: 189px;
+    /*Center of gameArea = (game-container height - base height-player height)/2*/
+    background: url(gallery/sprites/bird.png) no-repeat;
+}
+
+.game-over {
+    position: absolute;
+    background: url(gallery/sprites/gameover.png);
+    width: 192px;
+    height: 42px;
+    left: 17%;
+    top: 23%;
+}
+
+.score {
+    position: absolute;
+    left: 25%;
+    top: 42%;
+    font-family: "Press Start 2P", system-ui;
+    color: #fca444;
+    text-shadow: 
+        -2px -2px 0 #FFFFFF,  
+         2px -2px 0 #FFFFFF,
+        -2px  2px 0 #FFFFFF,
+         2px  2px 0 #FFFFFF,
+         0px  2px 0 #FF7C18; 
+    font-size: 22px;
+}
