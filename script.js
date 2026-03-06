@@ -66,6 +66,8 @@ function setupPipeAnimation() {
     });
 }
 
+
+
 function updatePipePositions(lowerPipe, upperPipe) {
     const gameScore = document.getElementById('score');
     const offset = parseInt(gameArea * 0.3);
